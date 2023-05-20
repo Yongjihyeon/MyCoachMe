@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+        <form method="POST">
+            {% csrf_token %}
+            <h1>회원가입</h1>
+            <label for="username">사용자명:</label>
+            <br>
+            <input name="username" type="text" value="">
+            <br>
+            <label for="password1">비밀번호:</label>
+            <br>
+            <input name="password1" type="password" value="">
+            <br>
+            <label for="password2">비밀번호 확인:</label>
+            <br>
+            <input name="password2" type="password" value="">
+            <br>
+            <br>
+            <input class="btn btn-primary" type="submit" value="회원가입">
+        </form>
+    </div>
+{% endblock %}
